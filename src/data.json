@@ -1,0 +1,134 @@
+{
+  "job": [
+    {
+      "startDate": "May 2017",
+      "endDate": "June 2018",
+      "companyName": "Contenance Technology",
+      "position": "Software Developer",
+      "description": "Hired for an ongoing project in the company, where I was directed to make a data logger system for automobile. Successfully made a device which would plug into the OBD port of a vehicle and log the data of power train system of the automobile. The technologies used in the project was raspberry pi and python."
+    },
+    {
+      "startDate": "Aug 2018",
+      "endDate": "July 2019",
+      "companyName": "SVR Infotech",
+      "position": "Design Engineer",
+      "description": "During my working period I contributed to 2 projects. One of which was dealing with BARC(Bhabha Atomic Research Center). My Primary job was to develop a control program for robots. It includes writing code in embedded C, Matlab and Python."
+    },
+    {
+      "startDate": "Aug 2020",
+      "endDate": "Present",
+      "companyName": "Freelance Web Developer and Graphic Designer",
+      "description": "Since my graduation in the web development program from Humber College I have been working as a freelancer graphic designer and web developer. As a freelancer I build websites and webapps with technologies like PHP, React, Node, MongoDB, Sql etc. I also tutor students and help them to learn programming concepts."
+    }
+  ],
+  "projects": [
+    {
+      "title": "rentrend",
+      "links": [
+        { "name": "demo", "link": "https://rentrend-app.herokuapp.com/" },
+        {
+          "name": "github",
+          "link": "https://github.com/adamitdeka/Rentrend"
+        }
+      ],
+      "desc": "The main objective of this project is to make UI and brand guidelines for Rentrend. Rentrend is an app where users can rent outfit and get it delivered at there doorsteps. In this project I have also design a process bood displaying all important elements of the project.",
+      "files": [
+        { "fileName": "Process Book", "src": "rentrend/processBook.pdf" }
+      ],
+      "images": [
+        {
+          "src": "rentrend/logo.jpg",
+          "alt": "Logo of rentrend which is a bow in blue"
+        },
+        {
+          "src": "rentrend/webpage1.png",
+          "alt": "homepage"
+        },
+        {
+          "src": "rentrend/webpage2.png",
+          "alt": "shop page"
+        }
+      ],
+      "technology": ["Node", "MongoDB", "React"]
+    },
+    {
+      "title": "MAS Immigration",
+      "links": [
+        { "name": "Visit Website", "link": "https://masimmigration.com/" }
+      ],
+      "desc": "MAS immigration is an immigration consultancy company. I helped them to build their brand which included everything from logo, business cards, websites and merchandises.",
+      "images": [
+        {
+          "src": "mas/mas1.png",
+          "alt": "Logo of MAS Immgration, CN tower oon top of a globe circle by phrase migrate and settle"
+        },
+        {
+          "src": "mas/mas2.jpg",
+          "alt": "Homepage"
+        },
+        {
+          "src": "mas/mas3.jpg",
+          "alt": "Service Page"
+        },
+        {
+          "src": "mas/mas4.jpg",
+          "alt": "Business Card"
+        }
+      ],
+      "technology": ["PHP", "Wordpress", "CSS", "SQL"]
+    },
+    {
+      "title": "HR Square",
+      "links": [{ "name": "Visit Website", "link": "https://hrsquare.ca/" }],
+      "desc": "HR Square is in Brampton and cover their operation in Greater Toronto Area. They provide general help semi-skilled and skilled manpower in various fields i.e., packaging food processing, machine operating, fork lifting, welding, and various others. Developed a business website in order to make a digital presence and increase client tail.",
+      "images": [
+        {
+          "src": "hrSquare/hr1.png",
+          "alt": "Logo of MAS Immgration, CN tower oon top of a globe circle by phrase migrate and settle"
+        },
+        {
+          "src": "hrSquare/hr2.jpg",
+          "alt": "Homepage"
+        },
+        {
+          "src": "hrSquare/hr3.jpg",
+          "alt": "Service Page"
+        }
+      ],
+      "technology": ["PHP", "Wordpress", "CSS", "SQL"]
+    },
+    {
+      "title": "Recipe Bank",
+      "links": [
+        {
+          "name": "Visit Website",
+          "link": "https://entimosmedia.com/projects/recipebank/"
+        },
+        {
+          "name": "Github",
+          "link": "https://github.com/adamitdeka/RecipeBank"
+        }
+      ],
+      "desc": "Recipe bank is a recipe sharing website. The purpose of this website was to connect people by sharing recipes. You can try to login with following credentials for admin functionalities- EMAIL: chris@foodie.ca and PASSWORD: foodLover",
+      "images": [
+        {
+          "src": "recipeBank/rb1.png",
+          "alt": "Homepage"
+        },
+        {
+          "src": "recipeBank/rb2.png",
+          "alt": "admin page"
+        },
+        {
+          "src": "recipeBank/rb3.png",
+          "alt": "admin page"
+        },
+        {
+          "src": "recipeBank/rb4.png",
+          "alt": "admin page"
+        }
+      ],
+      "technology": ["PHP", "Bootstrap", "CSS", "SQL"]
+    }
+  ]
+}

@@ -1,0 +1,562 @@
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Open+Sans:wght@300;500;800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+}
+:root {
+  --light-color: #f5f5f5;
+  --dark-color: #222222;
+}
+.flex {
+  display: flex;
+}
+.m4 {
+  margin-top: 4em;
+}
+.m2 {
+  margin-top: 2em;
+}
+#banner {
+  height: 100vh;
+  overflow: none;
+}
+#pattern-container {
+  width: 100%;
+}
+
+.section-heading-container {
+  text-align: center;
+  width: 100%;
+  margin: 2em 0;
+  padding: 1em;
+}
+.section-heading {
+  font-size: 2.5em;
+  text-transform: uppercase;
+}
+
+#banner-inner-container {
+  position: relative;
+  z-index: 4;
+  width: 40%;
+  height: 100%;
+  background-color: var(--dark-color);
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#banner-name {
+  position: relative;
+  text-align: center;
+  font-family: var(--heading-font);
+  font-size: 4em;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--light-color);
+}
+#sm-icons-header {
+  text-align: center;
+  padding: 1em 0;
+}
+#sm-icons-header a {
+  font-size: 1.5em;
+  color: var(--light-color);
+  padding: 1em;
+}
+#banner-menu {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+.menu-item {
+  margin: 1em;
+}
+.menu-item a {
+  padding: 0.5em 1em;
+  text-decoration: none;
+  color: #ffffff;
+  font-family: var(--heading-font);
+  font-size: 1em;
+  font-weight: 400;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.menu-item a:hover {
+  color: var(--dark-color);
+  background-color: #8f8f8f;
+  border-radius: 5px;
+}
+
+#navbar {
+  position: relative;
+  width: 100%;
+  padding: 1em;
+  background-color: var(--dark-color);
+}
+#header-menu {
+  list-style: none;
+  justify-content: space-evenly;
+}
+#about {
+  position: relative;
+  padding: 4em;
+  background-color: var(--light-color);
+}
+#about-inner-container {
+  width: 50%;
+  margin: 1.5em auto;
+}
+#about-inner-container p {
+  font-family: "Crimson Pro", serif;
+  line-height: 24pt;
+  font-size: 1.2em;
+  text-align: justify;
+  color: var(--dark-color);
+}
+#job-timeline {
+  position: relative;
+}
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: #222222;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+.job-year {
+  font-style: italic;
+  font-weight: lighter;
+}
+.job-desc {
+  font-family: "Crimson Pro", serif;
+}
+.job-title,
+.job-desc,
+.job-year {
+  color: #222222;
+}
+
+/* Container around content */
+.timeline-item {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -13px;
+  background-color: #f5f5f5;
+  border: 4px solid #222222;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+/* .left {
+  left: 0;
+} */
+.timeline-item:nth-child(odd) {
+  left: 0;
+}
+
+/* Place the container to the right */
+.timeline-item:nth-child(even) {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.timeline-item:nth-child(odd)::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid #f5f5f5;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #222222;
+}
+
+/* Add arrows to the right container (pointing left) */
+.timeline-item:nth-child(even)::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid #f5f5f5;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #222222 transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.timeline-item:nth-child(even)::after {
+  left: -13px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: #f5f5f5;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  position: relative;
+  border-radius: 6px;
+}
+
+#work {
+  position: relative;
+}
+
+#projects {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px 50px;
+  background-color: white;
+  padding: 10px;
+}
+
+.project-item-container {
+  width: 100%;
+  position: relative;
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #222222;
+  opacity: 0.95;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: 0.5s ease;
+}
+
+.project-item:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+
+.project-title {
+  color: white;
+  font-size: 1.2em;
+  text-transform: capitalize;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.project-btn-container {
+  text-align: center;
+  margin: 1em;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  -webkit-transform: translate(-60%, -50%);
+  -ms-transform: translate(-60%, -50%);
+  transform: translate(-60%, -50%);
+  text-align: center;
+}
+.project-btn {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #e74c3c;
+  border-radius: 0.6em;
+  color: #e74c3c;
+  cursor: pointer;
+  display: flex;
+  align-self: center;
+  font-size: 0.8em;
+  font-weight: 400;
+  line-height: 1;
+  margin: 20px;
+  padding: 0.5em 2em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  border-color: #f1c40f;
+  color: #fff;
+  background-image: linear-gradient(45deg, #f1c40f 50%, transparent 50%);
+  background-position: 100%;
+  background-size: 400%;
+  transition: background 300ms ease-in-out;
+}
+.project-btn:hover {
+  background-position: 0;
+}
+
+.modal-title {
+  text-transform: capitalize;
+  font-size: 2em;
+}
+.carousel-img-container {
+  width: 100%;
+  height: 400px;
+  background-color: white;
+}
+.carousel-img {
+  height: 100%;
+  margin: 0 auto;
+}
+.project-desc {
+  font-family: "Crimson Pro", serif;
+}
+
+.tech {
+  padding: 0.2em 0.8em;
+  display: inline-block;
+  margin-right: 1em;
+  background-color: #e2e0e0;
+  border-radius: 10px;
+}
+.tech-heading {
+  flex: 1 0 0;
+  color: #222222;
+  font-size: 1.2em;
+}
+
+.link-container {
+  margin: 1em 1em 1em 0;
+}
+
+.link {
+  padding: 0.5em 1em;
+  color: white;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+.link:hover {
+  opacity: 0.8;
+  color: white;
+}
+.file-link {
+  background-color: crimson;
+}
+.project-links {
+  background-color: #0f97f1;
+}
+
+#contact {
+  position: relative;
+  background-color: #222222;
+  padding: 4em;
+  text-align: center;
+}
+#contact-inner-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.heading-container {
+  padding: 1em;
+  margin: 1em;
+}
+#contact-heading {
+  color: var(--light-color);
+  text-transform: capitalize;
+  font-weight: 300;
+}
+.field-container {
+  margin: 2em;
+}
+.text-field-container {
+  display: inline-block;
+}
+.text-field {
+  background-color: transparent;
+  width: 100%;
+  border-style: none;
+  padding: 1em;
+  border-bottom: 1px solid var(--light-color);
+  color: var(--light-color);
+  font-weight: 300;
+}
+#submit-btn {
+  padding: 0.5em 1em;
+  border-style: none;
+  background-color: transparent;
+  border: 1px solid var(--light-color);
+  text-transform: capitalize;
+  font-weight: 300;
+  color: var(--light-color);
+  border-radius: 10px;
+  transition: 200ms;
+}
+#submit-btn:hover {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+}
+
+.text-field::placeholder {
+  text-transform: capitalize;
+}
+
+.error {
+  border-color: crimson;
+}
+.error::placeholder {
+  color: crimson;
+}
+
+#footer {
+  background-color: var(--dark-color);
+  position: relative;
+}
+#footer-inner-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1em;
+  color: var(--light-color);
+  border-top: 1px solid #555555;
+}
+#footer-icons {
+  justify-content: space-between;
+}
+#sm-icons-footer a {
+  font-size: 1.2em;
+  color: var(--light-color);
+  padding: 1em;
+}
+#footer-note {
+  padding: 1em;
+  text-align: center;
+}
+#react-icon {
+  color: #61dafb;
+}
+
+/* Media Queries************************************ */
+@media only screen and (max-width: 1024px) {
+  #banner-name {
+    font-size: 2.5em;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #banner-inner-container {
+    width: 60%;
+  }
+  #banner-name {
+    font-size: 1.8em;
+  }
+  #about {
+    padding: 1em;
+  }
+  #about-inner-container {
+    width: 100%;
+  }
+  /* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+
+  /* Full-width containers */
+  .timeline-item {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  /* Make sure that all arrows are pointing leftwards */
+  .timeline-item::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .timeline-item:nth-child(odd)::after,
+  .timeline-item:nth-child(even)::after {
+    left: 15px;
+  }
+
+  /* Make all right containers behave like the left ones */
+  .timeline-item:nth-child(even) {
+    left: 0%;
+  }
+}
+@media only screen and (max-width: 425px) {
+  #banner-inner-container {
+    width: 60%;
+  }
+  #banner-name {
+    font-size: 1.5em;
+  }
+  #about {
+    padding: 1em;
+  }
+  #about-inner-container {
+    width: 100%;
+  }
+  #projects {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (max-width: 375px) {
+  #banner-inner-container {
+    width: 60%;
+  }
+  #banner-name {
+    font-size: 1.5em;
+  }
+  #sm-icons-header a {
+    font-size: 1em;
+  }
+  .menu-item a {
+    font-weight: 300;
+    font-size: 0.8em;
+  }
+  #about {
+    padding: 1em;
+  }
+  #about-inner-container {
+    width: 100%;
+  }
+  #about-inner-container p {
+    text-align: left;
+  }
+  #projects {
+    grid-template-columns: 1fr;
+  }
+}
