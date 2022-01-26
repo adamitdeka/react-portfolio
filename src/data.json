@@ -37,16 +37,20 @@
       ],
       "images": [
         {
-          "src": "rentrend/logo.jpg",
+          "src": "rentrend/rt1.png",
           "alt": "Logo of rentrend which is a bow in blue"
         },
         {
-          "src": "rentrend/webpage1.png",
+          "src": "rentrend/rt2.png",
           "alt": "homepage"
         },
         {
-          "src": "rentrend/webpage2.png",
+          "src": "rentrend/rt3.png",
           "alt": "shop page"
+        },
+        {
+          "src": "rentrend/rt4.png",
+          "alt": "admin page"
         }
       ],
       "technology": ["Node", "MongoDB", "React"]
@@ -63,15 +67,15 @@
           "alt": "Logo of MAS Immgration, CN tower oon top of a globe circle by phrase migrate and settle"
         },
         {
-          "src": "mas/mas2.jpg",
+          "src": "mas/mas2.png",
           "alt": "Homepage"
         },
         {
-          "src": "mas/mas3.jpg",
+          "src": "mas/mas3.png",
           "alt": "Service Page"
         },
         {
-          "src": "mas/mas4.jpg",
+          "src": "mas/mas4.png",
           "alt": "Business Card"
         }
       ],
@@ -84,14 +88,14 @@
       "images": [
         {
           "src": "hrSquare/hr1.png",
-          "alt": "Logo of MAS Immgration, CN tower oon top of a globe circle by phrase migrate and settle"
+          "alt": "Logo of hr square"
         },
         {
-          "src": "hrSquare/hr2.jpg",
+          "src": "hrSquare/hr2.png",
           "alt": "Homepage"
         },
         {
-          "src": "hrSquare/hr3.jpg",
+          "src": "hrSquare/hr3.png",
           "alt": "Service Page"
         }
       ],

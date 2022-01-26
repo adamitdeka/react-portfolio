@@ -82,10 +82,10 @@
   color: #ffffff;
   font-family: var(--heading-font);
   font-size: 1em;
-  font-weight: 400;
+  font-weight: 300;
   transition: all 0.5s ease-in-out;
   position: relative;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .menu-item a:hover {
@@ -125,6 +125,7 @@
 }
 /* The actual timeline (the vertical ruler) */
 .timeline {
+  position: relative;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -134,7 +135,7 @@
   content: "";
   position: absolute;
   width: 6px;
-  background-color: #222222;
+  background-color: var(--dark-color);
   top: 0;
   bottom: 0;
   left: 50%;
@@ -169,8 +170,8 @@
   width: 25px;
   height: 25px;
   right: -13px;
-  background-color: #f5f5f5;
-  border: 4px solid #222222;
+  background-color: var(--light-color);
+  border: 4px solid var(--dark-color);
   top: 15px;
   border-radius: 50%;
   z-index: 1;
@@ -198,9 +199,9 @@
   width: 0;
   z-index: 1;
   right: 30px;
-  border: medium solid #f5f5f5;
+  border: medium solid var(--light-color);
   border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent #222222;
+  border-color: transparent transparent transparent var(--dark-color);
 }
 
 /* Add arrows to the right container (pointing left) */
@@ -212,9 +213,9 @@
   width: 0;
   z-index: 1;
   left: 30px;
-  border: medium solid #f5f5f5;
+  border: medium solid var(--light-color);
   border-width: 10px 10px 10px 0;
-  border-color: transparent #222222 transparent transparent;
+  border-color: transparent var(--dark-color) transparent transparent;
 }
 
 /* Fix the circle for containers on the right side */
@@ -225,7 +226,7 @@
 /* The actual content */
 .content {
   padding: 20px 30px;
-  background-color: #f5f5f5;
+  background-color: var(--light-color);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   position: relative;
   border-radius: 6px;
@@ -334,14 +335,19 @@
 .carousel-img-container {
   width: 100%;
   height: 400px;
-  background-color: white;
+  background-color: var(--light-color);
 }
 .carousel-img {
-  height: 100%;
+  width: 100%;
+  height: auto;
   margin: 0 auto;
 }
 .project-desc {
   font-family: "Crimson Pro", serif;
+}
+
+.tech-container {
+  flex-wrap: wrap;
 }
 
 .tech {
@@ -355,6 +361,11 @@
   flex: 1 0 0;
   color: #222222;
   font-size: 1.2em;
+  text-transform: uppercase;
+}
+
+.projectLink-container {
+  flex-wrap: wrap;
 }
 
 .link-container {
@@ -465,11 +476,22 @@
 #react-icon {
   color: #61dafb;
 }
+#contact-msg {
+  text-align: center;
+  margin: 1em;
+}
+#contact-msg p {
+  color: rgb(124, 212, 124);
+  font-weight: normal;
+}
 
 /* Media Queries************************************ */
 @media only screen and (max-width: 1024px) {
   #banner-name {
     font-size: 2.5em;
+  }
+  .carousel-img-container {
+    height: 262px;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -485,6 +507,9 @@
   #about-inner-container {
     width: 100%;
   }
+  .section-heading {
+    font-size: 2em;
+  }
   /* Place the timelime to the left */
   .timeline::after {
     left: 31px;
@@ -499,16 +524,16 @@
 
   /* Make sure that all arrows are pointing leftwards */
   .timeline-item::before {
-    left: 60px;
-    border: medium solid white;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
+    left: 60px !important;
+    border: medium solid var(--light-color);
+    border-width: 10px 10px 10px 0 !important;
+    border-color: transparent var(--dark-color) transparent transparent !important;
   }
 
   /* Make sure all circles are at the same spot */
   .timeline-item:nth-child(odd)::after,
   .timeline-item:nth-child(even)::after {
-    left: 15px;
+    left: 18px;
   }
 
   /* Make all right containers behave like the left ones */
@@ -517,6 +542,9 @@
   }
 }
 @media only screen and (max-width: 425px) {
+  .section-heading {
+    font-size: 1.5em;
+  }
   #banner-inner-container {
     width: 60%;
   }
@@ -531,6 +559,12 @@
   }
   #projects {
     grid-template-columns: 1fr 1fr;
+  }
+  #contact {
+    padding: 1em;
+  }
+  .carousel-img-container {
+    height: 200px;
   }
 }
 @media only screen and (max-width: 375px) {
@@ -558,5 +592,8 @@
   }
   #projects {
     grid-template-columns: 1fr;
+  }
+  .carousel-img-container {
+    height: 180px;
   }
 }

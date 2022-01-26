@@ -335,14 +335,19 @@
 .carousel-img-container {
   width: 100%;
   height: 400px;
-  background-color: white;
+  background-color: var(--light-color);
 }
 .carousel-img {
-  height: 100%;
+  width: 100%;
+  height: auto;
   margin: 0 auto;
 }
 .project-desc {
   font-family: "Crimson Pro", serif;
+}
+
+.tech-container {
+  flex-wrap: wrap;
 }
 
 .tech {
@@ -356,6 +361,11 @@
   flex: 1 0 0;
   color: #222222;
   font-size: 1.2em;
+  text-transform: uppercase;
+}
+
+.projectLink-container {
+  flex-wrap: wrap;
 }
 
 .link-container {
@@ -466,11 +476,22 @@
 #react-icon {
   color: #61dafb;
 }
+#contact-msg {
+  text-align: center;
+  margin: 1em;
+}
+#contact-msg p {
+  color: rgb(124, 212, 124);
+  font-weight: normal;
+}
 
 /* Media Queries************************************ */
 @media only screen and (max-width: 1024px) {
   #banner-name {
     font-size: 2.5em;
+  }
+  .carousel-img-container {
+    height: 262px;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -542,6 +563,9 @@
   #contact {
     padding: 1em;
   }
+  .carousel-img-container {
+    height: 200px;
+  }
 }
 @media only screen and (max-width: 375px) {
   #banner-inner-container {
@@ -568,5 +592,8 @@
   }
   #projects {
     grid-template-columns: 1fr;
+  }
+  .carousel-img-container {
+    height: 180px;
   }
 }

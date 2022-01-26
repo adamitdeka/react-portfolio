@@ -1,6 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./styles/stylesCopy.css";
+import "./styles/styles.css";
 import Banner from "./components/home/Banner";
 import About from "./components/about/About";
 import Projects from "./components/work/Projects";

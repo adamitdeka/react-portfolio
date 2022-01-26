@@ -2,6 +2,7 @@ import { useState } from "react";
 import emailjs from "emailjs-com";
 function Contact() {
   var [error, setState] = useState("");
+  var [success, setMessage] = useState("");
   function sendEmail(e) {
     e.preventDefault();
     if (e.target.name.value === "") {
@@ -19,7 +20,12 @@ function Contact() {
             "user_hOpmJ4VssN8j4S6iRusoH"
           )
           .then((res) => {
-            console.log("Email Response:: ", res);
+            if (res.status === 200) {
+              setMessage("Message Sent Successfully!");
+              e.target.email.value = "";
+              e.target.name.value = "";
+              e.target.message.value = "";
+            }
           })
           .then((err) => {
             console.log("Email error", err);
@@ -57,7 +63,7 @@ function Contact() {
                 className={`text-field ${error}`}
                 id="email"
                 name="email"
-                type="text"
+                type="email"
                 placeholder="your email (required)"
                 autoComplete="off"
               />
@@ -72,6 +78,9 @@ function Contact() {
             </div>
             <div className="field-container">
               <input id="submit-btn" type="submit" value="get in touch" />
+            </div>
+            <div id="contact-msg">
+              <p>{success}</p>
             </div>
           </div>
         </form>
